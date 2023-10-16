@@ -73,7 +73,7 @@ app.use((error, req, res, next) => {
 
 const PORT = process.env.PORT || 5000;
 
-mongoose.connect("mongodb+srv://HimanshuSRaghav:himanshu2684@cluster0.dpyc4tr.mongodb.net/CURD?retryWrites=true&w=majority"
+mongoose.connect(process.env.DB_CONNECTION
 , { useNewUrlParser: true, useUnifiedTopology: true,useCreateIndex:true }).then(() => {
     _response.database = "Healthy"
     console.log("Database Connected")
